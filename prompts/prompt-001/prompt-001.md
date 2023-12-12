@@ -2,7 +2,6 @@
 date: 2023-12-12
 ---
 
-
 The following lists relevant contextual details about a scenario:
 
 - Culture: America
