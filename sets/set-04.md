@@ -1,16 +1,17 @@
-# set-04
+# Set 04
 
 The purpose of this set is to understand what kind of contextual information chatGPT will give about a scenario.
 
 Does it take into account all of the relevant contextual information?
 
 
-## prompt-001
+## Iteration 001
 
 - date: 2023-12-21
 
-### Prompt
+### Prompt Text (001)
 
+```
 Here is a scenario:
 
 A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
@@ -18,8 +19,9 @@ A man is being called in to work overtime on a national holiday. He is talking w
 ---
 
 Instructions: Exhaustively list out all of the additional information that you would require in order to make the most accurate and appropriate pragmatic response.
+```
 
-### Response
+### Response (001)
 
 > In order to provide the most accurate and appropriate pragmatic response to the scenario, I would need additional information on the following aspects:
 > 
@@ -64,7 +66,7 @@ Instructions: Exhaustively list out all of the additional information that you w
 > 
 > Having answers to these questions would enable a more comprehensive understanding of the situation and help in crafting a pragmatic response that considers legal, contractual, and interpersonal aspects.
 
-### Observation
+### Observation (001)
 
 - there seem to be a number of different considerations, but it is not an exhaustive list. This also could be because of limited output space.
 
@@ -73,16 +75,17 @@ Instructions: Exhaustively list out all of the additional information that you w
 - specify a brief output
 
 
-## prompt-002
+## Iteration 002
 
 
 - date: 2023-12-21
 - changes:
-    - same as prompt-001 but asking for specifically brief output
+    - same as Iteration 001 but asking for specifically brief output
     - ask for output in a table
 
-### Prompt
+### Prompt Text (002)
 
+```
 Here is a scenario:
 
 A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
@@ -92,8 +95,9 @@ A man is being called in to work overtime on a national holiday. He is talking w
 Instructions: Exhaustively list out all of the additional information that you would require in order to make the most accurate and appropriate pragmatic response.
 
 Output requirements: A table with columns "category" and "key information" where "key information" contains only key words of information that you are looking for.
+```
 
-### Response
+### Response (002)
 
 | Category                   | Key Information                                |
 |----------------------------|------------------------------------------------|
@@ -110,7 +114,7 @@ Output requirements: A table with columns "category" and "key information" where
 | Company Culture            | Company values, approach to work-life balance  |
 
 
-### Observations
+### Observations (002)
 
 - this is more or less similar to the previous response and still lacks other information
 
@@ -119,10 +123,11 @@ Output requirements: A table with columns "category" and "key information" where
 - Expand the prompt so that it also lists assumptions as a separate table
 
 
-## prompt-003
+## Iteration 003
 
-### Prompt
+### Prompt Text (003)
 
+```
 Here is a scenario:
 
 A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
@@ -142,9 +147,10 @@ Output requirements (two tables):
 1. A table with columns "category" and "assumption" where "assumption" contains a short description of the assumed information.
 
 2. A table with columns "category" and "key information" where "key information" contains only key words of information that you are looking for.
+```
 
 
-### Response
+### Response (003)
 
 **Assumptions:**
 
@@ -173,7 +179,7 @@ Output requirements (two tables):
 | Company Culture | What is the company's general approach to work-life balance and employee well-being? |
 
 
-### Observations
+### Observations (003)
 
 - The context that it is concerned with is directly related to the workplace and nothing else
 - even assumptions made 

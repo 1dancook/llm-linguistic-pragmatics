@@ -1,4 +1,4 @@
-# set-03
+# Set 03
 
 This purpose of this set is to explore what kind of information chatGPT will require from a user about a scenario before it gives a response.
 
@@ -9,19 +9,20 @@ Expectations:
 - It should ask the user questions to fill in missing contextual information about the scenario
 - It should state clearly what kind of information it is inquiring about
 
-## prompt-001
+## Iteration 001
 
 - date: 2023-12-21
 
-### Prompt
-
+### Prompt Text (001)
+```
 The following lists relevant contextual details about a scenario:
 
 - Situation: A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
 
 Please produce a pragmatically appropriate response, but before you do, please prompt me for additional information you might need about the scenario.
+```
 
-### Transcript
+### Transcript (001)
 
 **ChatGPT**
 
@@ -73,7 +74,7 @@ Please produce a pragmatically appropriate response, but before you do, please p
 > 
 > These assumptions are made to construct a response that aligns with the given scenario and seeks a resolution while considering the man's perspective and the delicate relationship dynamics.
 
-### Observations / Thoughts
+### Observations / Thoughts (001)
 
 - Note: A follow-up question was asked about assumptions made after chatGPT had produced a response
 - this is a good interaction and chatGPT tried to fill in missing pieces
@@ -91,13 +92,14 @@ Please produce a pragmatically appropriate response, but before you do, please p
 
 
 
-## prompt-002
+## Iteration 002
 - date: 2023-12-21
-- based on: prompt-001
+- based on: Iteration 001
 
 
-### Prompt
+### Prompt Text (002)
 
+```
 The following lists relevant contextual details about a scenario:
 
 - Situation: A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
@@ -105,9 +107,10 @@ The following lists relevant contextual details about a scenario:
 Please produce a pragmatically appropriate response, but before you do, please prompt me for additional information you might need about the scenario. If you ask me questions, please categorize them.
 
 After you have produced a response, please also write a list of assumptions that you have made about the context, if any.
+```
 
 
-### Transcript
+### Transcript (002)
 
 
 **ChatGPT**
@@ -184,7 +187,7 @@ After you have produced a response, please also write a list of assumptions that
 >    - The man is not responsible for finding alternative solutions; it's the boss's responsibility.
 >    - The man has a valid reason (family traditions on Christmas Day) for not wanting to work on the national holiday.
 
-### Observations / Thoughts
+### Observations / Thoughts (002)
 
 - it did not do what was asked
     - it produced a response before prompting for more information
@@ -199,13 +202,14 @@ After you have produced a response, please also write a list of assumptions that
 - specify for it to go into fine-grained detail about the context
 
 
-## prompt-003
+## Iteration 003
 
 - date: 2023-12-21
-- based on: prompt-001
+- based on: Iteration 001
 
-### Prompt
+### Prompt Text (003)
 
+```
 The following lists relevant contextual details about a scenario:
 
 - Situation: A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
@@ -215,9 +219,10 @@ Here's what I want you to do:
 1. Consider the scenario and don't make any assumptions. Prompt me for fine-grained details about relevant context for the scenario.
 
 2. After you have been well-informed about the context of the scenario, produce a pragmatically appropriate response.
+```
 
 
-### Transcript
+### Transcript (003)
 
 **ChatGPT**
 > Prompt for Fine-Grained Details:
@@ -268,7 +273,7 @@ Here's what I want you to do:
 > Man: I appreciate you explaining the situation, and I understand the urgency. I've always tried to be a reliable team member, and I don't want to jeopardize our relationship with the client. However, it's also a national holiday, and I had plans with my family. Is there any way we could explore alternatives, like having someone else cover the shift, or perhaps I can work extra hours on another day to make up for it? I want to help, but I also want to balance my personal commitments.
 > 
 
-### Observations / Thoughts
+### Observations / Thoughts (003)
 
 - obviously, chatGPT mixed up the instruction and somehow tried to modify what the boss said
 - the eventual response for the man is good

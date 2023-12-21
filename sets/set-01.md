@@ -1,4 +1,4 @@
-# set-01
+# Set 01
 
 - llm: chatGPT
 - llm-version: 3.5
@@ -11,20 +11,22 @@ Expectations:
 - it should produce a wide range of pragmatic responses
 
 
-## prompt-001
+## Iteration 001
 
 - date: 2023-12-07
 
-### Prompt
+### Prompt Text (001)
 
+```
 The following lists relevant contextual details about a scenario:
 
 - Culture: America
 - Situation: A man is being called in to work overtime on a national holiday. He is talking with his boss. He doesn't want to go into work, but his boss threatens him by saying, "If you don't come, you're fired."
 
 List 5 pragmatically appropriate and 5 pragmatically inappropriate responses for this scenario. You can include vulgar responses.
+```
 
-### Response
+### Response (001)
 
 Pragmatically Appropriate Responses:
 
@@ -61,7 +63,7 @@ Pragmatically Inappropriate Responses:
    - "You want me to work on a holiday? Is this a joke? Did I accidentally sign up for a stand-up comedy show?"
 
 
-### Observations/Thoughts
+### Observations/Thoughts (001)
 
 
 - The LLM was prompted for appropriate and inappropriate responses
@@ -84,16 +86,17 @@ Pragmatically Inappropriate Responses:
 - specify MORE context for the man (maybe about what is happening at home)
 
 
-## prompt-002
+## Iteration 002
 
 - date: 2023-12-12
-- based on: prompt-001
+- based on: Iteration 001
 - changes:
     - specify output format (table with columns, etc.)
     - specify not adding any commentary or summary
     - specify adding the strategy it employs
 
-### Prompt
+### Prompt Text (002)
+```
 
 The following lists relevant contextual details about a scenario:
 
@@ -109,8 +112,9 @@ Output Requirements:
 - write the output as a tab separated table (TSV)
 - the table columns will be "Response", "Strategy", "Suitability"
 - the output should be in a codeblock
+```
 
-### Response
+### Response (002)
 
 - notes:
     - formatting was applied because the output table had an incorrectly formatted heading
@@ -131,7 +135,7 @@ Output Requirements:
 | 10. "I can't make it today. Fire me if you must."                                  | Resignation/Defiance       | Inappropriate |
 
 
-### Observations/Thoughts
+### Observations/Thoughts (002)
 
 - The output was not done correctly (I asked for TSV, it gave me space separated values)
 - Responses seemed shorted than 001
@@ -152,10 +156,10 @@ Output Requirements:
 - specify that the response must logically fit the situation
 
 
-## prompt-003
+## Iteration 003
 
 - date: 2023-12-12
-- based on: prompt-002
+- based on: Iteration 002
 - changes:
     - specify a column for the response number
     - specify the output format to be a markdown table
@@ -163,7 +167,8 @@ Output Requirements:
     - specify the speaking mode
     - specify that the response must logically fit the situation
 
-### Prompt
+### Prompt Text (003)
+```
 
 The following lists relevant contextual details about a scenario:
 
@@ -182,8 +187,9 @@ Output Requirements:
 - the table columns will be "Response Number", "Response", "Strategy", "Suitability", "Speaking Mode"
 - do not quote the response
 - the output should be in a codeblock
+```
 
-### Response
+### Response (003)
 
 | Response Number    | Response                                                                                                              | Strategy                               | Suitability                 | Speaking Mode       |
 | ------------------ | -------------------------------------------------------                                                               | -----------------------------          | --------------------------- | ------------------  |
@@ -199,7 +205,7 @@ Output Requirements:
 | 10 | "I'll be there, but you owe me big time for this."                                                                                    | Compliance/Negotiating                 | Appropriate                 | Assertive           |
 
 
-### Observations/Thoughts
+### Observations/Thoughts (003)
 
 - The expected results for the `Speaking Mode` column were categories like "yelling", "whispering", etc.
     - **Thought:** The idea for `Speaking Mode` was to get have more context about the response itself. ChatGPT produced a discourse type. A `Discourse Type` may be more useful as a category than a speaking mode.
@@ -223,17 +229,18 @@ Output Requirements:
 - Get the output into CSV format with the delimiter as a pipe character ("|")
 
 
-## prompt-004
+## Iteration 004
 
 - date: 2023-12-12
-- based on: prompt-003
+- based on: Iteration 003
 - changes:
     - change `Speaking Mode` column name to `Discourse Type`
     - specify that explitives can be included and should be written out
     - change instruction about quoting response to be more specific
 
-### Prompt
+### Prompt Text (004)
 
+```
 The following lists relevant contextual details about a scenario:
 
 - Culture: America
@@ -253,9 +260,10 @@ Output Requirements:
 - the table columns will be "Response Number", "Response", "Strategy", "Suitability", "Discourse Type"
 - do not wrap the response in double quotes
 - the output should be in a codeblock
+```
 
 
-### Response
+### Response (004)
 
 | Response Number | Response | Strategy | Suitability | Discourse Type |
 |------------------|----------|----------|--------------|-----------------|
@@ -271,7 +279,7 @@ Output Requirements:
 | 10               | "You must be [expletive] kidding me! I don't give a [expletive] about your threats. Find someone else to ruin their holiday." | Disregarding the Threat and Expressing Disdain | Inappropriate | Aggressive |
 
 
-### Observations/Thoughts
+### Observations/Thoughts (004)
 
 - The `Strategy` column is different than in previous responses.
     - **Thought:** It will be better to specify what this column should be about, or provide a better column name.
@@ -291,10 +299,10 @@ Output Requirements:
 - Change "Output Requirements" to "Output Format Requirements"
 
 
-## prompt-005
+## Iteration 005
 
 - date: 2023-12-12
-- based on: prompt-004
+- based on: Iteration 004
 - changes:
     - Provide more specific names and descriptions for columns
     - Specify several new columns (features) for the output
@@ -304,8 +312,9 @@ Output Requirements:
 - note:
     - formatting applied to response (CSV to markdown table)
 
-### Prompt
+### Prompt Text (005)
 
+```
 The following lists relevant contextual details about a scenario:
 
 - Culture: America
@@ -331,8 +340,9 @@ Output Format Requirements:
         - Emotion/Tone: The emotional tone or attitude expressed in the utterance.
         - Politeness Level: Degree of politeness in the response (Rude, Casual, Polite, Respectful, Formal)
         - Humor: Presence and type of humor in the response (if any)
+```
 
-### Response
+### Response (005)
 
 | Number | Response                                                                                                                                            | Suitability   | Intent/Strategy        | Illocutionary Force | Emotion/Tone | Politeness Level | Humor |
 | ---    | ---                                                                                                                                                 | ---           | ---                    | ---                 | ---          | ---              | ---   |
@@ -348,7 +358,7 @@ Output Format Requirements:
 | 10     | Fire me? Go ahead. I'd rather be unemployed than work for someone who doesn't respect personal time.                                                | Appropriate   | Defiance               | Assertion           | Defiant      | Casual           | None  |
 
 
-### Observations/Thoughts
+### Observations/Thoughts (005)
 
 - It did not follow instructions to give 5 inappropriate and 5 appropriate responses
 - Response 1 is not coherent with the scenario

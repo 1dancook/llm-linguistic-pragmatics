@@ -1,4 +1,4 @@
-# set-02
+# Set 02
 
 *This will only use chatGPT 3.5.*
 
@@ -13,17 +13,19 @@ Expected production from chatGPT:
 
 Results:
 
-- set-02/prompt-06 had a great result 
+- set-02/Iteration 06 had a great result 
 - Overall this was quite difficult to get to the expected result even with very clear and concise instructions.
 
 
-## prompt-001
+## Iteration 001
 
-### Prompt
+### Prompt Text (001)
 
+```
 I want to practice pragmatic responses to scenarios. Tell me about a scenario and prompt me for a response. After I write a response, please evaluate it.
+```
 
-### Transcript
+### Transcript (001)
 
 **You**
 
@@ -59,7 +61,7 @@ I want to practice pragmatic responses to scenarios. Tell me about a scenario an
 > This response demonstrates a more empathetic and collaborative approach. It opens the door for Sarah to express any challenges or difficulties she may be facing, fostering communication rather than confrontation. This approach is likely to yield more information about the underlying issues and could lead to a more constructive solution for the entire team. Well done!
 
 
-### Observations / Thoughts
+### Observations / Thoughts (001)
 
 - The scenario provided was good
 - The scenario provided is a moderately difficult level of English
@@ -73,7 +75,7 @@ I want to practice pragmatic responses to scenarios. Tell me about a scenario an
 - ask it to keep the scenario description short
 
 
-## prompt-002
+## Iteration 002
 - date: 2023-12-13
 - changes:
     - ask it to offer some examples if need be
@@ -81,11 +83,13 @@ I want to practice pragmatic responses to scenarios. Tell me about a scenario an
     - ask it for easier English
 
 
-### Prompt
+### Prompt Text (002)
 
+```
 I want to practice pragmatic responses to scenarios. Give me a short description of a scenario and prompt me for a response. After I write a response, please evaluate it. If you think I need some examples, write some. Please use easy English for our conversation.
+```
 
-### Transcript
+### Transcript (002)
 
 **You**
 
@@ -114,7 +118,7 @@ I want to practice pragmatic responses to scenarios. Give me a short description
 > 
 > Remember, the key is to remain friendly, understanding, and helpful. Keep up the good work!
 
-### Observations / Thoughts
+### Observations / Thoughts (002)
 
 - The scenario was explained with a shorter description than 01
 - The English used was not necessarily easy
@@ -135,15 +139,16 @@ I want to practice pragmatic responses to scenarios. Give me a short description
 - Translate the prompt into Japanese
 
 
-## prompt-003
+## Iteration 003
 
 - date: 2023-12-13
 - changes:
     - Add instructions to use English only for the scenario and any example responses.
     - Translate the prompt into Japanese
 
-### Prompt
+### Prompt Text (003)
 
+```
 English Version:
 
 I want to practice pragmatic responses to scenarios in English. Give me a short description of a scenario and prompt me for a response. After I write a response, please evaluate it. If you think I need some examples, write some. Please use easy English. Use English for the scenario description and responses, but Japanese for everything else.
@@ -155,8 +160,9 @@ Japanese Version (produced by chatGPT):
 *Small correction: 実践的な --> 語用論の*
 
 シナリオの中で語用論の対応を英語で練習したいです。シナリオの簡単な説明を教えて、それに対する返答を促してください。私が返答を書いたら、評価してください。もし例が必要なら、いくつか書いてください。簡単な英語を使用してください。シナリオの説明と返答には英語を使ってくださいが、それ以外は日本語を使用してください。
+```
 
-### Transcript
+### Transcript (003)
 
 #### Attempt 1
 
@@ -281,7 +287,7 @@ Japanese Version (produced by chatGPT):
 > 
 > (日本語で) よくできました！あなたの返答は丁寧でわかりやすいです。うまく問題を伝えていますが、対立的ではありません。お疲れ様でした！
 
-### Observations / Thoughts
+### Observations / Thoughts (003)
 
 - Very inconsistent initial responses when using the Japanese prompt
 - Reverting back to the English prompt yielded better initial responses
@@ -295,14 +301,15 @@ Japanese Version (produced by chatGPT):
 
 - Structure the prompt well in English
 
-## prompt-004
+## Iteration 004
 - date: 2023-12-13
 - changes:
     - Add instructions to use English only for the scenario and any example responses.
     - Translate the prompt into Japanese
 
-### Prompt
+### Prompt Text (004)
 
+```
 Goal: I want to practice pragmatic responses to scenarios in English. 
 
 Instructions: 
@@ -310,23 +317,24 @@ Instructions:
 - Step 2: Prompt me with "What is your response?"
 - Step 3: After I write a response you will write an evaluation of my response entirely in Japanese. The evaluation should explain why my response is pragmatically appropriate or not.
 - Step 4: After you write an evaluation, if you think that I need to try again with another response, please ask then evaluate.
+```
 
-
-### Transcript
+### Transcript (004)
 
 *(expectations were not met)*
 
-### Observations / Thoughts
+### Observations / Thoughts (004)
 
 With this kind of prompt chatGPT will produce wildly different things even though the instructions are concise. 
 
-## prompt-005
+## Iteration 005
 
 - date: 2023-12-14
 - notes: This prompt is quite different in structure.
 
-### Prompt
+### Prompt Text (005)
 
+```
 I want to practice pragmatic responses to scenarios. The responses should be something I need to say.
 
 First, Tell me about a scenario that will require a response.
@@ -334,8 +342,9 @@ First, Tell me about a scenario that will require a response.
 Then, let's take turns doing this until my response is pragmatically appropriate to the scenario:
     1. I will write a response.
     2. You will write an evaluation of my response. If I need to revise my response, tell me  to try again.
+```
 
-### Transcript
+### Transcript (005)
 
 
 **You**
@@ -374,7 +383,7 @@ Then, let's take turns doing this until my response is pragmatically appropriate
 
 > Evaluation: Your response is polite and deflects the request in a professional manner. You acknowledge the situation and suggest an appropriate course of action by directing the colleague to ask the boss. This maintains a positive and cooperative tone while effectively handling the situation. Well done! If you're ready, we can move on to the next scenario, or you can choose a different one.
 
-### Observations / Thoughts
+### Observations / Thoughts (005)
 
 Overall:
 
@@ -387,15 +396,16 @@ Overall:
 - Ask it to use easy English
 - Ask it to use Japanese for the evaluations
 
-## prompt-006
+## Iteration 006
 
 - date: 2023-12-14
 - changes:
     - ask for easy English
     - ask for the evaluation to be in Japanese
 
-### Prompt
+### Prompt Text (006)
 
+```
 I want to practice pragmatic responses to scenarios. The responses should be something I need to say.
 
 First, tell me about a scenario that will require a response (in easy English)
@@ -403,8 +413,9 @@ First, tell me about a scenario that will require a response (in easy English)
 Then, let's take turns doing this until my response is pragmatically appropriate to the scenario:
     1. I will write a response.
     2. You will write an evaluation (in Japanese) of my response. If I need to revise my response, tell me  to try again.
+```
 
-### Transcript
+### Transcript (006)
 
 **You**
 
@@ -473,7 +484,7 @@ Then, let's take turns doing this until my response is pragmatically appropriate
 
 > Evaluation (in Japanese): 謝罪が適切であり、行動への転換も良いですね。Candy Crushをやめて即座にメールを送るという積極的な姿勢が求められている状況に対応しています。適切な対応です。
 
-### Observations / Thoughts
+### Observations / Thoughts (006)
 
 - The overall interaction is great and what is expected
 - The evaluation from chatGPT is fairly good - it gives useful advice on how to respond to the scenario without giving it away
